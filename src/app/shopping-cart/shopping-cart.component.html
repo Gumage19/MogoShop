@@ -1,0 +1,30 @@
+<div class="container">
+    <div *ngIf="getCartLength() > 0; else NoCart">
+        <ng-container *ngFor="let item of cartData | keyvalue">
+            <cart-item [cartItem]="item.value"></cart-item>
+        </ng-container>  
+        <div class="row">
+            <div class="col">
+                <button (click)="clearCart()"  class="btn btn-danger">Clear Cart</button>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1">
+                    </div>    
+                    <div class="col">
+                        <p class="qty-box">{{getCartLength()}}</p>
+                    </div>  
+                    <div class="col-1"> 
+                    </div>
+                </div>
+
+                  
+            </div>
+            <div class="col-2 total"><h5 class="total">Total</h5><p class="card-text total"> {{getCartPrice()|currency}}</p></div>
+        </div>
+    </div>
+    <ng-template #NoCart>
+        <h5>Your Cart is Empty</h5>  
+        <button class="btn btn-primary" routerLink="/">Return to the Products Page</button>
+    </ng-template>
+</div>

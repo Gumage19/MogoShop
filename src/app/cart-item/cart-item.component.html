@@ -1,0 +1,20 @@
+<div *ngIf="getQuantity(cartItem) > 0" class="container">
+    <div class="row">
+        <div class="col"><h5 class="card-title">{{cartItem.name}}</h5></div>
+        <div class="col-2">
+            <div class="col-1 qty">
+                <button (click)="removeFromCart(cartItem)" class="btn btn-secondary">-</button>
+            </div>
+            <div class="col-2 qty">
+                <p class="qty-box">{{getQuantity(cartItem)}}</p>
+            </div>            
+            <div class="col-1 qty">
+                <button (click)="addToCart(cartItem)" class="btn btn-secondary">+</button>
+            </div>      
+        </div>
+        <div class="col-1"><p class="card-text">{{getPrice(cartItem)|currency}}</p></div>
+        <div class="col-1">
+            <button (click)="deleteFromCart(cartItem)" class="btn btn-danger">Remove</button>
+        </div>
+    </div>
+</div>

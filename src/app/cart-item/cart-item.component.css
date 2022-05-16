@@ -1,0 +1,13 @@
+.qty {
+    display: inline;
+}
+.qty-box {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.row{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid gray;
+}

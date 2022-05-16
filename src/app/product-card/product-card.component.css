@@ -1,0 +1,16 @@
+.card-footer{
+    padding: 0px;
+}
+
+.card{
+    margin-bottom: 30px;
+    width: 18rem;
+}
+
+.qty-row{
+    margin-right: 0px;
+}
+
+:host {
+    width: auto;
+}
