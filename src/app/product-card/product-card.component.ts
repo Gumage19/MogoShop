@@ -13,23 +13,39 @@ export class ProductCardComponent{
   @Input ('product') product!:Product;
   constructor(private CartService: ShoppingCartService) { }
 
+  /* 
+  * Description: Add the product to the cart.
+  * Parameters: Product
+  * Returns: void
+  */  
   addToCart(product:Product){
-    //Add the product to the cart
     this.CartService.addToCart(product);
   }
 
+  /* 
+  * Description: Remove the product to the cart.
+  * Parameters: Product
+  * Returns: void
+  */    
   removeFromCart(product:Product){
-    //Remove the product to the cart
     this.CartService.removeFromCart(product);
   }
 
+  /* 
+  * Description: Return the items cart quantity.
+  * Parameters: Product
+  * Returns: number
+  */    
   getQuantity(product:Product){
-    //Return the items cart quantity
     return this.CartService.getCartItemQty(product);
   }
 
+  /* 
+  * Description: Return the items cart price.
+  * Parameters: Product
+  * Returns: number
+  */     
   getPrice(product:Product){
-    //Return the items cart price
     return this.CartService.getCartItemPrice(product);
   }
 

@@ -16,18 +16,30 @@ export class ShoppingCartComponent {
     this.cartData = CartService.getCartData();
   }
 
+  /* 
+  * Description: Returns the units in the cart.
+  * Parameters: none
+  * Returns: number
+  */  
   getCartLength(){
-    //Return the units in the cart
     return this.CartService.getCartItemsQty();
   }
 
+  /* 
+  * Description: Returns the total price of all lines in the cart.
+  * Parameters: none
+  * Returns: number
+  */  
   getCartPrice(){
-    //Return the cart price
     return this.CartService.getCartItemsPrice();
   }
 
+  /* 
+  * Description: Clears call items from the cart.
+  * Parameters: none
+  * Returns: void
+  */  
   clearCart(){
-    //Clears call items from the cart
     this.CartService.clearCart();
   }
 }
